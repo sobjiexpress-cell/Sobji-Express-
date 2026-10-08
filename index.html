@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sobji Express — বেলিয়াতোর</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span>🥬</span><div><b>Sobji Express</b><small>বেলিয়াতোর</small></div></div>
+  <button class="cart-btn" onclick="openCart()">🛒 Cart <strong id="cartCount">0</strong></button>
+</header>
+<section class="hero">
+  <div><h1>তাজা বাজার, এখন আপনার দরজায়</h1><p>আজ অর্ডার করুন — পরের দিন সকালে ডেলিভারি।</p>
+  <div class="search"><input id="search" placeholder="সবজি/পণ্য খুঁজুন..." oninput="renderProducts()"></div></div>
+</section>
+<nav id="cats"></nav>
+<main><div class="title-row"><h2>জনপ্রিয় পণ্য</h2><span id="result"></span></div><div id="products" class="grid"></div></main>
+
+<div id="cart" class="modal"><div class="sheet"><button class="close" onclick="closeCart()">×</button><h2>আপনার Cart</h2><div id="cartItems"></div><div class="total">মোট: ₹<span id="total">0</span></div>
+<form onsubmit="placeOrder(event)">
+<input id="name" required placeholder="আপনার নাম"><input id="phone" required placeholder="মোবাইল নম্বর" inputmode="numeric"><textarea id="address" required placeholder="ডেলিভারি ঠিকানা"></textarea>
+<select id="slot"><option>সকাল ৯টা–১১টা</option><option>সকাল ১১টা–দুপুর ১টা</option></select>
+<button class="order" type="submit">অর্ডার কনফার্ম করুন</button></form><p id="success" class="success"></p></div></div>
+<footer>Sobji Express • বেলিয়াতোর<br>WhatsApp Order: 7908999752</footer>
+<script src="app.js"></script>
+</body></html>
